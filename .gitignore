@@ -1,0 +1,11 @@
+.DS_Store
+*/.DS_Store
+
+node_modules
+package-lock.json
+Gemfile.lock
+.jekyll-cache
+
+_site
+
+*.gem
