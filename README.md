@@ -1,73 +1,61 @@
-## jekyll-theme-H2O-ac
+# English 
 
-基于 Jekyll 和 [H2O](https://github.com/kaeyleo/jekyll-theme-H2O) 主题、适合学术研究人员和运维开发人员的博客主题模板。
+[easy-to-H2O-ac](https://github.com/zhonger/easy-to-H2O-ac) is a project to show you how to use [jekyll-theme-H2O-ac](https://github.com/zhonger/jekyll-theme-H2O-ac) theme by a very easy way -- **gem**.
 
-An Jekyll theme for researchers and maintainers based on Jekyll and [H2O](https://github.com/kaeyleo/jekyll-theme-H2O) theme.
+You can just click the **Use this template** button in this page to fork this project and begin your novel travel with **H2O-ac**.
 
-### Preview
+Or you also can just change your directories in your existed Jekyll project like this project. And then complete the following settings in `Gemfile` and `_config.yml` to apply **H2O-ac** theme.
 
-#### [在线预览 Live Demo →](http://lisz.me/)
+```ruby
+# Gemfile
+gem "jekyll"
+gem "jekyll-theme-h2o-ac"
+gem "jekyll-paginate"
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "webrick"
+```
 
-![vgy.me](https://i.vgy.me/pICzcE.png)
-![vgy.me](https://i.vgy.me/cI35JI.png)
-![vgy.me](https://i.vgy.me/ReKZeP.png)
+```yaml
+# _config.yml
+theme: jekyll-theme-h2o-ac
+```
 
-如果你喜欢这个博客模板，请在右上角star一下，非常感谢～
+After that, you can run `bundle update` to install or update these needed packages.
 
-If you like this theme or using it, please give a ⭐️ for motivation ;)
+The last thing is to run `bundle exec jekyll serve --liveload` to check it.
 
-如果想体验手机浏览效果，可以扫一下二维码：
+Enjoy your novel theme!
 
-![vgy.me](https://i.vgy.me/XGUDp6.png)
+# 中文
 
-Using your smartphone to scan the QR Code
+[easy-to-H2O-ac](https://github.com/zhonger/easy-to-H2O-ac) 是一个向你展示如何以一种非常简单的方式（**gem**）使用 [jekyll-theme-H2O-ac](https://github.com/zhonger/jekyll-theme-H2O-ac) 主题的项目。
 
-### New Features based on H2O， 与 H2O 不同的新特性
+你可以通过点击本页面上的 `Use this template` 按钮来快速克隆项目，然后开始你的 **H2O-ac** 之旅。
 
-#### CN
+当然如果你已经有了一个 Jekyll 项目，你可以在原有的基础上稍微修改保留如本项目所示的必须目录及文件。然后如下修改 `Gemfile` 和 `_config.yml` 中的一点内容即可应用 **H2O-ac** 主题。
 
-- 学术首页
-- 归档页
-- 系统日志页
-- 社交图标扩展
-- 查看大图
-- 代码高亮优化
-- 字数统计及阅读时间估计
-- 配置项
-- 前端自动构建工作流优化
+```ruby
+# Gemfile
+gem "jekyll"
+gem "jekyll-theme-h2o-ac"
+gem "jekyll-paginate"
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "webrick"
+```
 
-#### EN
+```yaml
+# _config.yml
+theme: jekyll-theme-h2o-ac
+```
 
-- Academic Home Page
-- Archive Page
-- System Logs Page
-- An extened SNS icon set
-- Enlarge any pictures in articles
-- Optimize the code highlighting
-- Words Counts and evaluate needed time
-- New Settings
-- Optimize the automatic workflow for static files
+在此以后，你可以通过执行 `bundle update` 来安装或更新所需的依赖库。
 
-### Usage 快速开始
+最后一件事是，执行 `bundle exec jekyll serve --liveload` 来确认是否主题应用成功了。
 
-请访问 [H2O-ac theme for Jekyll](https://lisz.me/tech/webmaster/new-theme-h2o-ac.html) 查看详情。
+恭喜你成功应用了新主题！
 
-Please refer to [H2O-ac theme for Jekyll](https://lisz.me/tech/webmaster/new-theme-h2o-ac.html) for details.
+# License 许可证
 
-### Contribution 贡献
-
-Any types of contribution are welcome. Thanks.
-
-接受各种形式的贡献，包括不限于提交问题与需求，修复代码。等待您的 ```Pull Request```
-
-#### 感谢参与 H2O 代码贡献的伙伴
-
-- [kaeyleo](https://github.com/kaeyleo/)
-- [Ray-Eldath](https://github.com/Ray-Eldath)
-- [sctop](https://github.com/sctop)
-- [bananaappletw](https://github.com/bananaappletw)
-- [moycat](https://github.com/moycat)
-
-### License 许可证
-
-Jekyll-Theme-H2O-ac is licensed under [MIT](https://github.com/kaeyleo/jekyll-theme-H2O-ac/blob/master/LICENSE).
+easy-to-H2O-ac is licensed under [MIT](https://github.com/zhonger/easy-to-H2O-ac/blob/master/LICENSE).
