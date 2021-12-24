@@ -13,6 +13,7 @@ url: '' # your host
 # but if your created a repo named "myblog", and the site is "kaeyleo.github.io/myblog", change baseurl to '/myblog'
 # 但是，如果你创建了一个叫 "myblog" 的网站，此时网址会变成 "kaeyleo.github.io/myblog" ，这时再将 baseurl 设置为 '/myblog'
 baseurl: ''
+theme: jekyll-theme-h2o-ac
 
 # Navigation links
 nav:
