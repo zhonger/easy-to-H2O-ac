@@ -25,7 +25,18 @@ After that, you can run `bundle update` to install or update these needed packag
 
 The last thing is to run `bundle exec jekyll serve --liveload` to check it.
 
+Except these, one-click deployment is also supported now.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zhonger/easy-to-h2o-ac)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zhonger/easy-to-h2o-ac)
+
 Enjoy your novel theme!
+
+## Demo
+
+- Netlify Demo - [here](https://easy-h2o-ac.netlify.app/)
+- Cloudflare Demo - [here](https://easy-h2o-ac.pages.dev/)
+- Vercel Demo - [here](https://easy-h2o-ac.vercel.app/)
 
 # 中文
 
@@ -54,7 +65,18 @@ theme: jekyll-theme-h2o-ac
 
 最后一件事是，执行 `bundle exec jekyll serve --liveload` 来确认是否主题应用成功了。
 
+当然，我们也提供了一键部署支持。
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zhonger/easy-to-h2o-ac)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zhonger/easy-to-h2o-ac)
+
 恭喜你成功应用了新主题！
+
+## 在线演示
+
+- Netlify 节点 - [点击访问](https://easy-h2o-ac.netlify.app/)
+- Cloudflare 节点 - [点击访问](https://easy-h2o-ac.pages.dev/)
+- Vercel 节点 - [点击访问](https://easy-h2o-ac.vercel.app/)
 
 # License 许可证
 
