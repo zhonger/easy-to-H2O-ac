@@ -98,4 +98,4 @@ RSS: true
 permalink: /:categories/:title.html
 
 # Plugins
-plugins: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
+# plugins: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
