@@ -2,7 +2,7 @@
 title: 'Mr Li'
 description: '个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。'
 keyword: 'zhonger，zhonger的博客，nodejs，kvm, 机器学习'
-url: '' # your host
+url: 'https://easy-h2o-ac.pages.dev' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
 # 在服务器上建站时，如果你不需要子域名，请将这一格留空
@@ -15,6 +15,11 @@ url: '' # your host
 baseurl: ''
 theme: jekyll-theme-h2o-ac
 
+# PWA
+pwa:
+  color: '#81BBFF'
+  short_name: 'lisz'
+
 # Navigation links
 nav:
   home: '/'
@@ -23,6 +28,17 @@ nav:
   tags: '/tags.html'
   RSS: '/feed.xml'
   logs: '/logs.html'
+
+# Gray for the whole site 全站灰色
+gray: false
+
+# Formats
+# 时间格式（Time format）：0 -- 2022-04-29    1 -- 29 Apr 2022   2 -- 2022年4月29日
+formats:
+  time: 0   
+
+# Favicon
+favicon: "/favicon.ico"
 
 # Footer
 footer:
@@ -44,6 +60,8 @@ nightMode: false
 comments:
   disqus: false
   disqus_url: 'https://liaokeyu.disqus.com/embed.js'
+  waline: false
+  waline_url: 'https://h2o-ac-waline.vercel.app'
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
@@ -75,6 +93,29 @@ links:
 # Beian 备案号
 beian: '沪ICP备xxxxxxxx号'
 
+# CC License
+cclicense: true
+
+# CNZZ Analytics
+# cnzz: 1234567891
+cnzz: 
+
+# Busuanzi Analytics
+busuanzi: true
+
+# Umami Analytics
+umami:
+  status: 
+  id: 
+  js: 
+
+# Google Analytics
+# google_analytics: UA-XXXXXXXXX-X
+google_analytics: 
+
+# Google Search
+google_search: 
+
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
 recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
@@ -89,6 +130,9 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
+prism:
+  theme:
+  line_numbers: true
 
 # RSS
 RSS: true
@@ -96,6 +140,9 @@ RSS: true
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
 permalink: /:categories/:title.html
+
+# TOC
+toc: true
 
 # Plugins
 # plugins: [jekyll-paginate, jekyll-feed, jekyll-sitemap]

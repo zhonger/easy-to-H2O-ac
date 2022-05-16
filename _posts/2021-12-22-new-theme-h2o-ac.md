@@ -29,19 +29,19 @@ tags: jekyll theme blog ac develop 主题 前端开发 学术 运维
 
 &emsp;&emsp;学术首页如下图所示，并将原来 H2O 中的卡片首页移动到 blog 子目录下了。如果读者想要看到文章卡片展示页，还是可以点击顶部的导航栏中的 BLOG 直接访问。
 
-![首页 Home](https://i.vgy.me/pICzcE.png)
+![首页 Home](https://i.lisz.top/blog/XyT038.webp)
 
 #### 归档页
 
 &emsp;&emsp;归档页设置为由 Jekyll 按照模板自动生成，以年份、日期、文章标题分级列表展示，简洁清晰。
 
-![归档页 Archives](https://i.vgy.me/25IZzc.png)
+![归档页 Archives](https://i.lisz.top/blog/lj4vUP.webp)
 
 #### 系统日志页
 
 &emsp;&emsp;系统日志页其实也不是经常更新的，只有在博客整体作出设置或改进的才加以说明。另外，也可以将一些固定的站点信息放置在系统日志页，比如站点的多点部署信息，读者可以根据此信息访问最快、最合适的节点。
 
-![系统日志 Log](https://i.vgy.me/tUCNEb.png)
+![系统日志 Log](https://i.lisz.top/blog/7QLEc6.webp)
 
 ### 使用体验提升
 
@@ -51,13 +51,13 @@ tags: jekyll theme blog ac develop 主题 前端开发 学术 运维
 
 &emsp;&emsp;H2O 原有的社交图标其实已经比较广泛，只是还有些领域局限性，比如学术研究人员可能更希望展示谷歌学术、ResearchGate、ORCID 等社交图标及链接，而运维开发人员可能更希望展示 SegmentFault、CSDN、博客园等社交图标及链接。这里在 H2O 提供的社交图标类型基础上做了这些平台图标的扩充，同时尝试了 Symbol 引用的方式来实现社交图标鼠标悬停的效果，从而简化代码（H2O 采用的是字体图标的方式，需要为每一个社交图标定义不同的主题色）。
 
-![社交图标 SNS](https://i.vgy.me/ebCeqM.png)
+![社交图标 SNS](https://i.lisz.top/blog/UpnQdk.webp)
 
 #### 查看大图
 
 &emsp;&emsp;查看大图功能的确对于读者的阅读体验来说有很大的提升。就像我们阅读文献一样，可能首先会只看文章附图来大致掌握文章的核心点。博文的查看大图功能也可能有这样的异曲同工之妙。这里是采用的 [Fancybox](https://fancyapps.com/docs/ui/fancybox) 插件实现的。H2O-ac 主题中只使用了最简单的配置，用户可以根据需求查看文档做出更多的修改。
 
-![查看大图 Fancybox](https://i.vgy.me/FNRDTv.png)
+![查看大图 Fancybox](https://i.lisz.top/blog/BzfBoz.webp)
 
 (2022年4月30日更新)
 
@@ -69,9 +69,9 @@ tags: jekyll theme blog ac develop 主题 前端开发 学术 运维
 
 &emsp;&emsp;原来 H2O 主题的深色模式切换需要在 _config.yml 文件中配置开启，并且只能在固定时间段使用。此次更新在页面右上角提供了深色/浅色模式一键切换按钮，如下图所示。由于更新了深色模式采用 cookie 的方式来确定，此深色模式切换按钮可以与原来的深色模式配置共存。
 
-![浅色模式 Day mode](https://i.vgy.me/x1CWVs.png)
+![浅色模式 Day mode](https://i.lisz.top/blog/EPhFN9.webp)
 
-![深色模式 Night mode](https://i.vgy.me/8DGFx2.png)
+![深色模式 Night mode](https://i.lisz.top/blog/BD7BqC.webp)
 
 #### 提示框
 
@@ -98,11 +98,33 @@ tags: jekyll theme blog ac develop 主题 前端开发 学术 运维
 
 &emsp;&emsp;本人使用 H2O 主题的时候代码高亮功能还是沿用的 Jekyll 自带的，后来 H2O 主题也开始采用了 [Prism.js](https://prismjs.com/)。不过由于使用的是 `OKAIDIA` 高亮主题，所以有些段落中的格式化字段显示上有些问题。这里，仍然采用默认主题，并且扩增到 Prism.js 支持的所有编程语言类型。效果可以从前一句的 OKAIDIA 字段和下面即将出现的代码片段看出。
 
+```css
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), url(https://fonts.gstatic.com/...) format('woff2');
+}
+```
+
+(2022年5月14日更新)
+
+&emsp;&emsp;更换 Prism 库加载方式，采用按需自动加载代码类型，尽可能减少因 Prism 造成的阻塞。修复了某些样式问题。增加显示行数支持、官方主题选择支持。如下所示可以进行设置，具体主题风格样式可以访问 [Prism 官网](https://prismjs.com/) 了解更多。
+
+```yaml
+# Prism
+prism:
+  theme: tomorrow
+  line_numbers: true
+```
+
 #### 代码复制
 
 (2022年5月1日更新)
 
 &emsp;&emsp;由于主题设置有复制自动添加版权保护文字，导致复制代码或无法直接使用。但是如果直接去掉版权保护又不大合适，于是新增代码复制功能。当使用如下所示代码片段右上角的复制按钮时，代码会被复制到粘贴板，且不包含版权保护文字，可以放心直接使用。
+
+(2022年5月14日更新)
+
+&emsp;&emsp;调整复制按钮位置，自动识别代码块的代码类型并显示。
 
 ```html
 <!-- Target -->
@@ -128,6 +150,10 @@ tags: jekyll theme blog ac develop 主题 前端开发 学术 运维
 
 &emsp;&emsp;在原来的基础上增加了跟随左侧内容滑动高亮。当左侧内容向上或向下滑动时，右侧索引导航将会使对应的对应一级标题高亮。
 
+(2022年5月14日更新)
+
+&emsp;&emsp;为文章的移动端页面添加了索引导航按钮。鉴于单页面的内容有限及侧边位置空间有限，暂未对单页面进行支持。
+
 #### 支持 Waline 评论系统
 
 &emsp;&emsp;目前已支持基于 Valine 衍生的简洁、安全的评论系统。可以根据官方提供的 [快速上手](https://waline.js.org/guide/get-started.html) 进行配置，以下为 _config.yml 中需要配置的内容：
@@ -141,13 +167,35 @@ comments:
 ```
 
 &emsp;&emsp;目前未对多评论系统同时支持进行优化，所以如果 Disqus 和 Waline 同时开启时，Disqus 在前 Waline 在后同时出现。如果用户环境无法访问 Disqus 即只能看到 Waline。
+
+#### 支持 PWA
+
+(2022年5月11日更新)
+
+&emsp;&emsp;全面支持 PWA，访问速度得到较大提升。移动端访问可以像原生 APP 那样使用。如果访问过全站一遍之后，则可以完全离线使用。如下所示，可以配置 PWA 的主题色和短名称。
+
+```yaml
+# PWA
+pwa:
+  color: '#81BBFF'
+  short_name: 'lisz'
+```
+
 #### 配置项
 
 &emsp;&emsp;配置项中新增了**友情链接**和**备案号**功能，可以直接在 _config.yml 文件的对应配置项下设置即可，如下所示。友情链接主要是方便跟其他博主交换友链，备案号主要是为了方便部署在国内需备案的 vps 或虚拟主机上。此处，二者都可以置空。
 
 (2022年4月30日更新)
 
-&emsp;&emsp;新增全站一键灰度化功能、时间格式配置。在国家公祭日等需要灰度化以示哀悼的时候可以将灰度化配置设置为 true，平常使用默认配置 false。时间格式这里一共提供了 3 种：第一种中英文站点使用皆宜，第二种适用于英文站点，第三种适用于中文站点。默认时间格式为第一种。
+&emsp;&emsp;新增**全站一键灰度化功能**、**时间格式**配置。在国家公祭日等需要灰度化以示哀悼的时候可以将灰度化配置设置为 true，平常使用默认配置 false。时间格式这里一共提供了 3 种：第一种中英文站点使用皆宜，第二种适用于英文站点，第三种适用于中文站点。默认时间格式为第一种。
+
+(2022年5月14日更新)
+
+&emsp;&emsp;新增 [**不蒜子**](https://busuanzi.ibruce.info/) 统计方式，可以显示全站访问次数、全站访问用户数、文章页面阅读量。如下设置可以开启。
+
+(2022年5月16日更新)
+
+&emsp;&emsp;新增 [**umami**](https://github.com/mikecao/umami) 统计方式，需要自行先搭建 umami 然后接入。接入配置只需要如下所示配置跟踪 id 和 JS 脚本地址。
 
 ```yaml
 # Links 友情链接
@@ -164,22 +212,32 @@ gray: true
 # 0 -- 2022-04-29    1 -- 29 Apr 2022   2 -- 2022年4月29日
 formats:
   time: 0 
+
+# Busuanzi Analytics
+busuanzi: true
+
+# Umami Analytics
+umami:
+  status: true
+  id: xxxxxxxxxxxxx
+  js: https://umami.example.com/umami.js
 ```
 
 #### 前端自动构建工作流优化
 
-&emsp;&emsp;H2O 主题中使用了 Gulp + Node-Sass 的方案来自动化前端构建工作流。不得不说，这个方案还是很不错的，只是随着 Gulp 和 Node-Sass 版本的更新，对 NodeJS 环境及其他依赖库都有一些要求。这里，H2O-ac 主题在 package.json 文件中将所有库都更新到目前最新，对应版本列表如下所示。另外，为了减少一些第三方 CSS 样式的请求数，利用自动构建工作流将固定的第三方 CSS 样式文件合并并压缩为 plugins.min.css 文件。app.min.css 仍为多个自编写 CSS 样式文件的合并压缩。
+&emsp;&emsp;H2O 主题中使用了 Gulp + ~~Node-Sass~~ Sass 的方案来自动化前端构建工作流。不得不说，这个方案还是很不错的，只是随着 Gulp 和 ~~Node-Sass~~ Sass 版本的更新，对 NodeJS 环境及其他依赖库都有一些要求。这里，H2O-ac 主题在 package.json 文件中将所有库都更新到目前最新，对应版本列表如下所示。另外，为了减少一些第三方 CSS 样式的请求数，利用自动构建工作流将固定的第三方 CSS 样式文件合并并压缩为 plugins.min.css 文件。app.min.css 仍为多个自编写 CSS 样式文件的合并压缩。
 
 | 运行环境或依赖库 | 版本号 |
 | :--: | :--: |
-| NodeJS | v17.0.0 | 
-| gulp | v4.0.2 | 
-| gulp-clean-css | v4.3.0 | 
-| gulp-rename | v20.0 | 
-| gulp-sass | v5.0.0 | 
-| gulp-uglify | v3.0.2 | 
-| gulp-concat | v2.6.1 | 
-| node-sass | v7.0.0 | 
+| NodeJS | v17.0.0 |
+| gulp | v4.0.2 |
+| gulp-clean-css | v4.3.0 |
+| gulp-rename | v20.0 |
+| gulp-sass | v5.0.0 |
+| gulp-uglify | v3.0.2 |
+| gulp-concat | v2.6.1 |
+| ~~node-sass~~ | ~~v7.0.0~~ |
+| sass | v1.51.0 |
 
 ## 使用方法
 
@@ -189,7 +247,7 @@ formats:
 
 &emsp;&emsp;为了方便用户使用 H2O-ac 主题，特别提供了 Github 的模板功能。如下图所示，访问 [H2O-ac](https://github.com/zhonger/jekyll-theme-H2O-ac) 可以看到如下的 Use this template 按钮，点击该按钮即可用 H2O-ac 主题创建自己的博客代码仓库。想要了解更多步骤，可以访问 Github 官方文档之 [从模板创建仓库](https://docs.github.com/cn/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)。
 
-![从模板新建 Start the blog from the template](https://i.vgy.me/y7lv2Q.png)
+![从模板新建 Start the blog from the template](https://i.lisz.top/blog/oHHZZh.webp)
 
 #### 方式二：已有博客迁移
 
@@ -201,7 +259,7 @@ formats:
 
 ### 本地测试
 
-&emsp;&emsp;在进行本地测试时，如果需要修改一些样式，则需要先执行 `npm install` 来完成前端自动构建工作流依赖库的安装。注意，这里设定的可用 NodeJS 版本为 v17.0.0，使用老版本会报错。其次，务必使用 `bundle install` 安装主题所需的所有 Ruby 依赖库。最后执行 `bundle exec jekyll serve --livereload` 命令即可在本地实时同步预览。只要不修改 _config.yml 文件，不必中断后再启动。然后就是在 _posts 目录下写 markdown 文章即可。
+&emsp;&emsp;在进行本地测试时，如果需要修改一些样式，则需要先执行 `npm install` 来完成前端自动构建工作流依赖库的安装。注意，这里设定的可用 NodeJS 版本为 v17.0.0，使用老版本会报错。其次，务必使用 `bundle install` 安装主题所需的所有 Ruby 依赖库。最后执行 `bundle exec jekyll serve --livereload` 命令即可在本地实时同步预览。只要不修改 _config.yml 文件，不必中断后再启动。然后就是在 `_posts` 目录下写 markdown 文章即可。
 
 ### 发布部署
 
