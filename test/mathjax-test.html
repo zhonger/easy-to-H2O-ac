@@ -17,6 +17,10 @@
     <meta property="og:description" content="个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。">
     <meta property="og:site_name" content="Mr Li">
     <meta property="og:gray" content="false">
+    <meta property="post-date-format" content="0">
+    
+    <meta property="post-date" content="2017-07-30 00:00:00 +0000" />
+    
     
     <meta name="theme-color" content="#81BBFF" />
     <link rel="manifest" href="/manifest.json" />
@@ -29,7 +33,9 @@
     <link rel="preload" href="/assets/fonts/Merriweather-Regular.ttf" as="font" crossorigin="anonymous" />
     <link rel="stylesheet" href="/assets/fonts/Merriweather-Regular.ttf" media="print" onload="this.media='all'" />
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" />
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-one-light.min.css" />
     
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/plugins/line-numbers/prism-line-numbers.min.css">
@@ -143,37 +149,54 @@
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-calendar"></use>
             </svg>
-            
-              2017-07-30 00:00:00 +0000 
-            
+            <span class="create-at"></span>
+          </time>
+          <time class="post-meta-item" datetime="17-07-30">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-update"></use>
+            </svg>
+            <span class="update-at"></span>
           </time>
           
-          <span class="post-meta-item">
-            <svg class="icon words" aria-hidden="true">
-              <use xlink:href="#icon-words"></use>
-            </svg>
-          本文总共 299 字
-          </span>
-          <span class="post-meta-item">
-            <svg class="icon time" aria-hidden="true">
-              <use xlink:href="#icon-time"></use>
-            </svg>
-             阅读全文大约需要 1 分钟
-          </span>
+            <span class="post-meta-item">
+              <svg class="icon words" aria-hidden="true">
+                <use xlink:href="#icon-words"></use>
+              </svg>
+              
+              本文总共  378  字
+            </span>
+            <span class="post-meta-item">
+              <svg class="icon time" aria-hidden="true">
+                <use xlink:href="#icon-time"></use>
+              </svg>
+              阅读全文大约需要 2 分钟
+            </span>
+            
+              <span class="post-meta-item">
+                <svg class="icon pv" aria-hidden="true">
+                  <use xlink:href="#icon-pv"></use>
+                </svg>
+                本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次 
+              </span>
+            
           
-          <span class="post-meta-item">
-            <svg class="icon pv" aria-hidden="true">
-              <use xlink:href="#icon-pv"></use>
-            </svg>
-            本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
-          </span>
           
+            <span class="post-meta-item">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-image"></use>
+              </svg>
+              
+                
+                  封面图片由 <a href="https://unsplash.com/@kalenemsley" target="_blank">Kalen Emsley</a> 提供
+                
+              
+            </span>
           
         </div>
       </div>
       
       <div class="filter"></div>
-        <div class="post-cover" style="background: url('https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?w=1600&q=900') center no-repeat; background-size: cover;"></div>
+        <div class="post-cover" style="background: url('https://unsplash.lisz.tk/1465189684280-6a8fa9b19a7a.webp') center no-repeat; background-size: cover;"></div>
       
     </header>
     <div class="post-content visible">
@@ -193,13 +216,16 @@
 
 <p><strong>这是一个<code class="language-plaintext highlighter-rouge">align</code>的公式</strong>：</p>
 
-\[\text{for OTP : $\qquad$ if }\quad E(k,\:m)=c\\
-\begin{align}
-k\oplus m &amp;= c \\
-k &amp;= m\oplus c
-\end{align}
-\\
-\#\{\;k \in \mathscr K : \quad E(k,\:m)=c \;\}=1 \quad \forall m,\:c\]
+\[\begin{align}
+    \Phi(0,x) = \max_{u \in \mathcal{D}} \bigg[
+        \mathbb{E} &amp; \Phi\left(1, 
+        x + \int_0^1 \sigma^2(s) \, \zeta(s) \, u_s \, ds
+        + \int_0^1 \sigma(s) \, dW_s
+    \right) \\
+        &amp;- \frac{1}{2} \int_0^1 \sigma^2(s) \, \zeta(s) \,
+        \mathbb{E} u_s^2  \, ds
+    \bigg].
+\end{align}\]
 
 <p><strong>注意：</strong>公式块要想有较好的显示效果，必须在公式块标记符<code class="language-plaintext highlighter-rouge">$$</code><strong>前后</strong>留有空行，否则公式将不能正常居中。行内公式无此问题。</p>
 
@@ -305,18 +331,20 @@ k &amp;= m\oplus c
 
         
         <div class="read-next-item">
-          <a href="/%E6%8A%80%E6%9C%AF/new-theme-h2o.html" class="read-next-link" aria-label="H2O theme for Jekyll"></a>
+          <a href="/tech/new-theme-h2o.html" class="read-next-link" aria-label="H2O theme for Jekyll"></a>
             <section>
               <span>H2O theme for Jekyll</span>
               <p>正如我在微博上所说的，使用Jekyll半年以来一直没有令我满意的主题模板，所以开始计划自己写一套好看又好用的主题模...</p>
             </section>
             
             <div class="filter"></div>
-            <img src="https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?w=1600&q=900" alt="">
+            <img src="https://unsplash.lisz.tk/1485470733090-0aae1788d5af.webp" alt="">
             
         </div>
         
       </section>
+      
+   
       
 
       
@@ -334,7 +362,7 @@ k &amp;= m\oplus c
     <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备xxxxxxxx号</a>
   
   </section>
-  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> & <a href="https://github.com/zhonger/jekyll-theme-H2O-ac">H2O-ac</a> v1.1.4  (based on <a href="https://github.com/kaeyleo/jekyll-theme-H2O">H2O</a>) 
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> & <a href="https://github.com/zhonger/jekyll-theme-H2O-ac">H2O-ac</a> v1.1.7  (based on <a href="https://github.com/kaeyleo/jekyll-theme-H2O">H2O</a>) 
   
   </section>
   
@@ -413,6 +441,9 @@ k &amp;= m\oplus c
   <script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
   
   <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/customParseFormat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/relativeTime.js"></script>
   <script>
       // 给图片添加链接
       $(document).ready(function() {
@@ -437,9 +468,62 @@ k &amp;= m\oplus c
           
           
 
+          if($("#comments-switch").length > 0){
+            var comment_status = $("#cmn-toggle-4")[0].checked;
+            if(comment_status){
+              $("#waline").addClass("active");
+            }else {
+              $("#disqus_thread").addClass("active");
+            }
+            $("#cmn-toggle-4").click(function(){
+              $("#disqus_thread").toggleClass("active");
+              $("#waline").toggleClass("active");
+            })
+          }else {
+            if($("#disqus_thread").length > 0) {
+              $("#disqus_thread").addClass("active");
+            }else if($("#waline").length > 0) {
+              $("#waline").addClass("active");
+            }
+          }
+
+          var time_formats = ['YYYY-MM-DD HH:mm:ss ZZ', 'YYYY DD MMM HH:mm:ss ZZ', 'YYYY年MM月DD日 HH:mm:ss ZZ'];
+          function dateFormat(date, format){
+            var date_org = dayjs(date, time_formats[format]);
+            var date     = date_org.format(time_formats[format]);
+            return {"date_org": date_org, "date": date}
+          }
+
+          dayjs.extend(window.dayjs_plugin_customParseFormat);
+          dayjs.extend(window.dayjs_plugin_relativeTime);
+          var post_date = $("meta[property='post-date']").attr('content');
+          var post_date_format = $("meta[property='post-date-format']").attr('content');
+          var local_post_date = dateFormat(post_date, post_date_format);
+
+          $(".post time span.create-at").html(local_post_date["date"]);
+
+          fetch("https://api.github.com/repos/zhonger/jekyll-theme-H2O-ac/commits?path=_posts/2017-07-30-mathjax-test.md")
+          .then((response) => {
+            return response.json();
+          })
+          .then((commits) => {
+            if(commits.length != 0){
+              var update_at = dayjs(commits[0]['commit']['committer']['date']);
+            }else {
+              var update_at = post_date
+            }
+
+            var local_update_at = dateFormat(update_at, post_date_format);
+            $('.post time span.update-at').html(local_update_at["date"]);
+
+            var relative_time = dayjs().diff(local_update_at["date_org"], 'day');
+            if(relative_time > 365){
+              $(".post-copyright").append("<p class='tips'>本文最后一次更新为 <span>" + relative_time + "</span> 天前，文章中的某些内容可能已过时！</p>");
+            }
+          });         
       });
   </script>
-  <script src="https://at.alicdn.com/t/font_3046306_5ex1jlxzv93.js"></script>
+  <script src="https://at.alicdn.com/t/font_3046306_skfh9jzzbbf.js"></script>
   
   
   

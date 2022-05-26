@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://easy-h2o-ac.pages.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://easy-h2o-ac.pages.dev/" rel="alternate" type="text/html" /><updated>2022-05-16T14:28:34+00:00</updated><id>https://easy-h2o-ac.pages.dev/feed.xml</id><title type="html">Mr Li</title><subtitle>个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。</subtitle><author><name>zhonger</name></author><entry><title type="html">H2O-ac theme for Jekyll</title><link href="https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac.html" rel="alternate" type="text/html" title="H2O-ac theme for Jekyll" /><published>2021-12-22T11:50:00+00:00</published><updated>2021-12-22T11:50:00+00:00</updated><id>https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac</id><content type="html" xml:base="https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://easy-h2o-ac.pages.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://easy-h2o-ac.pages.dev/" rel="alternate" type="text/html" /><updated>2022-05-26T13:17:16+00:00</updated><id>https://easy-h2o-ac.pages.dev/feed.xml</id><title type="html">Mr Li</title><subtitle>个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。</subtitle><author><name>zhonger</name></author><entry><title type="html">H2O-ac theme for Jekyll</title><link href="https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac.html" rel="alternate" type="text/html" title="H2O-ac theme for Jekyll" /><published>2021-12-22T11:50:00+00:00</published><updated>2021-12-22T11:50:00+00:00</updated><id>https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac</id><content type="html" xml:base="https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;  正如大家所知，Jekyll 是一款高可定制的、非常流行的静态博客生成工具。围绕着 Jekyll 也衍生出了很多优秀的 Jekyll 主题， 由 &lt;a href=&quot;https://github.com/kaeyleo&quot;&gt;廖柯宇&lt;/a&gt; 开发的 &lt;a href=&quot;https://github.com/kaeyleo/jekyll-theme-H2O&quot;&gt;H2O&lt;/a&gt; 主题就是其中之一。极简主义、风格扁平化、卡片式布局、Medium 及知乎专栏的视觉风格等等特点，为我们带来了或许是迄今为止最漂亮的 Jekyll 主题。&lt;/p&gt;
 
@@ -107,6 +107,10 @@
 
 &lt;p&gt;  更换 Prism 库加载方式，采用按需自动加载代码类型，尽可能减少因 Prism 造成的阻塞。修复了某些样式问题。增加显示行数支持、官方主题选择支持。如下所示可以进行设置，具体主题风格样式可以访问 &lt;a href=&quot;https://prismjs.com/&quot;&gt;Prism 官网&lt;/a&gt; 了解更多。&lt;/p&gt;
 
+&lt;p&gt;(2022年5月23日更新)&lt;/p&gt;
+
+&lt;p&gt;  除官方代码库中默认代码主题外，新增扩展代码主题支持，比如常用的 One Light 等等。具体主题风格样式可以查看 &lt;a href=&quot;https://github.com/PrismJS/prism-themes/tree/master/themes&quot;&gt;PrismJS/prism-themes&lt;/a&gt; 了解更多。&lt;/p&gt;
+
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Prism&lt;/span&gt;
 &lt;span class=&quot;na&quot;&gt;prism&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;tomorrow&lt;/span&gt;
@@ -132,9 +136,87 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h4 id=&quot;文章置顶功能&quot;&gt;文章置顶功能&lt;/h4&gt;
+
+&lt;p&gt;(2022年5月26日更新)&lt;/p&gt;
+
+&lt;p&gt;  鉴于现有的 Jekyll 文章置顶库有点年久失修，决定徒手实现了一下文章置顶功能。具体文章列表页和归档页置顶效果如下所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.lisz.top/blog/mcF2Z3.webp&quot; alt=&quot;文章置顶 Top acticles&quot; /&gt;
+&lt;img src=&quot;https://i.lisz.top/blog/yajcoi.webp&quot; alt=&quot;归档页文章置顶 Top acticles in archives&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;分页依赖升级&quot;&gt;分页依赖升级&lt;/h4&gt;
+
+&lt;p&gt;(2022年5月26日更新)&lt;/p&gt;
+
+&lt;p&gt;  由于原有的 jekyll-paginate 库已停止更新，所以升级到目前更新、维护活跃的 &lt;a href=&quot;https://github.com/sverrirs/jekyll-paginate-v2&quot;&gt;jekyll-paginate-v2&lt;/a&gt; 库。原有的分页配置自 v1.1.7 版本后无法使用，请更换为如下类似设置：&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# _config.yml 旧配置&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;paginate&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;paginate_path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;blog/page:num&apos;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# _config.yml 新配置&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;pagination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;per_page&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;page:num/&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;  另外，blog/index.html 的头部信息中应该加上如下&lt;strong&gt;启用分页&lt;/strong&gt;的配置。否则，jekyll-paginate-v2 不会主动工作。&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;pagination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;封面图片作者及链接&quot;&gt;封面图片作者及链接&lt;/h4&gt;
+
+&lt;p&gt;(2022年5月26日更新)&lt;/p&gt;
+
+&lt;p&gt;  一直以来封面图片都是来自 &lt;a href=&quot;https://unsplash.com&quot;&gt;Unsplash&lt;/a&gt; 的免费高清图片，为了表明封面图片的来源和作者，现在文章的元信息中添加了对封面图片作者及链接的支持。如果想要声明，可以直接在文章的头部信息中添加如下配置：&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;......&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;cover&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;cover_author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;cover_author_link&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;......&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;  非文章的页面中也可以像上面那样声明相关的封面作者及链接，效果如下所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.lisz.top/blog/fzWjPs.webp&quot; alt=&quot;页面封面图片信息 Cover author for pages&quot; /&gt;&lt;/p&gt;
+
 &lt;h4 id=&quot;字数统计及阅读时间估计&quot;&gt;字数统计及阅读时间估计&lt;/h4&gt;
 
 &lt;p&gt;  字数统计及阅读时间估计这个小功能其实以前在用 WordPress 的时候比较常见。虽然说统计和估计的结果不一定完全准确，但是还是起到了一定的辅助阅读的作用。效果可以查看本页标题下的基本信息区域。&lt;/p&gt;
+
+&lt;h4 id=&quot;时间本地化与最近更新时间&quot;&gt;时间本地化与最近更新时间&lt;/h4&gt;
+
+&lt;p&gt;(2022年5月22日更新)&lt;/p&gt;
+
+&lt;p&gt;  为了支持来自不同时区的读者直接可以看到文章发布对应的本地时间，现已利用 dayjs 新增&lt;strong&gt;时间本地化&lt;/strong&gt;功能。并利用 Github API 查询页面的最近一次 commit 更新时间作为文章&lt;strong&gt;最近更新时间&lt;/strong&gt;。效果如下图所示。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.lisz.top/blog/Anb4xH.webp&quot; alt=&quot;构建位置时区 Jekyll deployment timezone&quot; /&gt;
+&lt;img src=&quot;https://i.lisz.top/blog/NMPXmQ.webp&quot; alt=&quot;读者时区 Reader timezone&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  如需使用&lt;strong&gt;最近更新时间&lt;/strong&gt;功能，务必在 _config.yml 文件中添加以下配置项：&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Github&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;github_username&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;repository&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;github_project_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;  如未正确进行以上配置，默认会将最近更新时间与发布时间保持一致。&lt;/p&gt;
+
+&lt;h4 id=&quot;版权显式声明&quot;&gt;版权显式声明&lt;/h4&gt;
+
+&lt;p&gt;(2022年5月18日更新)&lt;/p&gt;
+
+&lt;p&gt;  之前的版本只会在页面底部的信息栏中显示一个 CC 4.0 的小图标，不是很醒目。根据调研其他静态网站主题，发现一般都会在文章的末尾自动生成一个比较醒目的版权声明。另外，在版权声明中也将根据最近更新时间来判断内容是否可能过时。如果最近更新时间距离当前时间大于 365 天，则会显示具体日期并提醒有内容过时的可能。效果如下所示。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.lisz.top/blog/scNRyd.webp&quot; alt=&quot;版权显式声明 Copyright&quot; /&gt;
+&lt;img src=&quot;https://i.lisz.top/blog/C8RWtL.webp&quot; alt=&quot;内容可能过时提醒 Long time ago notification&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;文章侧边索引导航&quot;&gt;文章侧边索引导航&lt;/h4&gt;
 
@@ -152,7 +234,7 @@
 
 &lt;h4 id=&quot;支持-waline-评论系统&quot;&gt;支持 Waline 评论系统&lt;/h4&gt;
 
-&lt;p&gt;  目前已支持基于 Valine 衍生的简洁、安全的评论系统。可以根据官方提供的 &lt;a href=&quot;https://waline.js.org/guide/get-started.html&quot;&gt;快速上手&lt;/a&gt; 进行配置，以下为 _config.yml 中需要配置的内容：&lt;/p&gt;
+&lt;p&gt;  目前已支持基于 Valine 衍生的简洁、安全的评论系统 Waline。可以根据官方提供的 &lt;a href=&quot;https://waline.js.org/guide/get-started.html&quot;&gt;快速上手&lt;/a&gt; 进行配置，以下为 _config.yml 中需要配置的内容：&lt;/p&gt;
 
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# _config.yml&lt;/span&gt;
 
@@ -161,7 +243,16 @@
   &lt;span class=&quot;na&quot;&gt;waline_url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://xxxxxx.vercel.app&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;  目前未对多评论系统同时支持进行优化，所以如果 Disqus 和 Waline 同时开启时，Disqus 在前 Waline 在后同时出现。如果用户环境无法访问 Disqus 即只能看到 Waline。&lt;/p&gt;
+&lt;p&gt;  &lt;del&gt;目前未对多评论系统同时支持进行优化，所以如果 Disqus 和 Waline 同时开启时，Disqus 在前 Waline 在后同时出现。如果用户环境无法访问 Disqus 即只能看到 Waline。&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;(2022年5月22日更新)&lt;/p&gt;
+
+&lt;p&gt;  新增多评论切换按钮：当同时使用 Disqus 和 Waline 时，会在评论区域的右上角看到一个左右滑动切换按钮。如下所示，从左往右滑动即可从 Disqus 切换到 Waline。&lt;/p&gt;
+
+&lt;p&gt;  同时修复了手动切换深色模式时 Disqus 不会自动切换模式而造成的显示问题。目前在模式切换时 Disqus 会主动进行重新加载以适应当前模式。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.lisz.top/blog/WBgbUB.webp&quot; alt=&quot;Disqus 评论系统 Disqus comment&quot; /&gt;
+&lt;img src=&quot;https://i.lisz.top/blog/45JQ9H.webp&quot; alt=&quot;Waline 评论系统 Waline comments&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;支持-pwa&quot;&gt;支持 PWA&lt;/h4&gt;
 
@@ -306,13 +397,16 @@
 
 &lt;p&gt;&lt;strong&gt;这是一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;的公式&lt;/strong&gt;：&lt;/p&gt;
 
-\[\text{for OTP : $\qquad$ if }\quad E(k,\:m)=c\\
-\begin{align}
-k\oplus m &amp;amp;= c \\
-k &amp;amp;= m\oplus c
-\end{align}
-\\
-\#\{\;k \in \mathscr K : \quad E(k,\:m)=c \;\}=1 \quad \forall m,\:c\]
+\[\begin{align}
+    \Phi(0,x) = \max_{u \in \mathcal{D}} \bigg[
+        \mathbb{E} &amp;amp; \Phi\left(1, 
+        x + \int_0^1 \sigma^2(s) \, \zeta(s) \, u_s \, ds
+        + \int_0^1 \sigma(s) \, dW_s
+    \right) \\
+        &amp;amp;- \frac{1}{2} \int_0^1 \sigma^2(s) \, \zeta(s) \,
+        \mathbb{E} u_s^2  \, ds
+    \bigg].
+\end{align}\]
 
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;公式块要想有较好的显示效果，必须在公式块标记符&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$$&lt;/code&gt;&lt;strong&gt;前后&lt;/strong&gt;留有空行，否则公式将不能正常居中。行内公式无此问题。&lt;/p&gt;</content><author><name>zhonger</name></author><category term="test" /><category term="mathjax" /><summary type="html">mathjax in markdown :)</summary></entry><entry><title type="html">Hello Jekyll</title><link href="https://easy-h2o-ac.pages.dev/hello-jekyll.html" rel="alternate" type="text/html" title="Hello Jekyll" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>https://easy-h2o-ac.pages.dev/hello-jekyll</id><content type="html" xml:base="https://easy-h2o-ac.pages.dev/hello-jekyll.html">&lt;blockquote&gt;
   &lt;p&gt;Transform your plain text into static websites and blogs.&lt;/p&gt;
@@ -332,7 +426,7 @@ k &amp;amp;= m\oplus c
 
 &lt;h3 id=&quot;video-test&quot;&gt;Video Test&lt;/h3&gt;
 
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</content><author><name>Jekyll</name></author><category term="jekyll" /><summary type="html">Transform your plain text into static websites and blogs.</summary></entry><entry><title type="html">H2O theme for Jekyll</title><link href="https://easy-h2o-ac.pages.dev/%E6%8A%80%E6%9C%AF/new-theme-h2o.html" rel="alternate" type="text/html" title="H2O theme for Jekyll" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>https://easy-h2o-ac.pages.dev/%E6%8A%80%E6%9C%AF/new-theme-h2o</id><content type="html" xml:base="https://easy-h2o-ac.pages.dev/%E6%8A%80%E6%9C%AF/new-theme-h2o.html">&lt;p&gt;正如我在&lt;a href=&quot;http://weibo.com/1374146504/profile?topnav=1&amp;amp;wvr=6&quot;&gt;微博&lt;/a&gt;上所说的，使用&lt;a href=&quot;http://jekyll.com.cn/&quot;&gt;Jekyll&lt;/a&gt;半年以来一直没有令我满意的主题模板，所以开始计划自己写一套好看又好用的主题模板。设计之初就明确了极简主义，风格采用扁平化了，通过卡片式设计来进行区块分明的布局，参考了Medium的ui样式和知乎专栏的视觉风格。&lt;/p&gt;
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;https://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</content><author><name>Jekyll</name></author><category term="jekyll" /><summary type="html">Transform your plain text into static websites and blogs.</summary></entry><entry><title type="html">H2O theme for Jekyll</title><link href="https://easy-h2o-ac.pages.dev/tech/new-theme-h2o.html" rel="alternate" type="text/html" title="H2O theme for Jekyll" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>https://easy-h2o-ac.pages.dev/tech/new-theme-h2o</id><content type="html" xml:base="https://easy-h2o-ac.pages.dev/tech/new-theme-h2o.html">&lt;p&gt;正如我在&lt;a href=&quot;http://weibo.com/1374146504/profile?topnav=1&amp;amp;wvr=6&quot;&gt;微博&lt;/a&gt;上所说的，使用&lt;a href=&quot;http://jekyll.com.cn/&quot;&gt;Jekyll&lt;/a&gt;半年以来一直没有令我满意的主题模板，所以开始计划自己写一套好看又好用的主题模板。设计之初就明确了极简主义，风格采用扁平化了，通过卡片式设计来进行区块分明的布局，参考了Medium的ui样式和知乎专栏的视觉风格。&lt;/p&gt;
 
 &lt;h2 id=&quot;h2o&quot;&gt;H2O&lt;/h2&gt;
 
@@ -448,4 +542,4 @@ k &amp;amp;= m\oplus c
 
 &lt;p&gt;本想趁这次机会将整站https化的，但折腾了半天发现弹性web托管并不支持，所以暂时搁置https的想法。另外，博客统计工具一直使用的是&lt;a href=&quot;https://tongji.baidu.com&quot;&gt;百度统计&lt;/a&gt;，这次新增了Google Analytics。&lt;/p&gt;
 
-&lt;p&gt;这次从0到1，独自设计、开发再到发布大约用了一周时间，也算完成一个小小的开源项目了，后续也将持续完善和更新，欢迎&lt;a href=&quot;https://github.com/kaeyleo/jekyll-theme-H2O&quot;&gt;Star&lt;/a&gt;。&lt;/p&gt;</content><author><name>zhonger</name></author><category term="技术" /><category term="jekyll" /><category term="前端开发" /><category term="设计" /><summary type="html">正如我在微博上所说的，使用Jekyll半年以来一直没有令我满意的主题模板，所以开始计划自己写一套好看又好用的主题模板。设计之初就明确了极简主义，风格采用扁平化了，通过卡片式设计来进行区块分明的布局，参考了Medium的ui样式和知乎专栏的视觉风格。</summary></entry></feed>
+&lt;p&gt;这次从0到1，独自设计、开发再到发布大约用了一周时间，也算完成一个小小的开源项目了，后续也将持续完善和更新，欢迎&lt;a href=&quot;https://github.com/kaeyleo/jekyll-theme-H2O&quot;&gt;Star&lt;/a&gt;。&lt;/p&gt;</content><author><name>kaeyleo</name></author><category term="tech" /><category term="jekyll" /><category term="前端开发" /><category term="设计" /><summary type="html">正如我在微博上所说的，使用Jekyll半年以来一直没有令我满意的主题模板，所以开始计划自己写一套好看又好用的主题模板。设计之初就明确了极简主义，风格采用扁平化了，通过卡片式设计来进行区块分明的布局，参考了Medium的ui样式和知乎专栏的视觉风格。</summary></entry></feed>
