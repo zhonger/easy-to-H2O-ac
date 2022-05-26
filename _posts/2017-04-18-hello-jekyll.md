@@ -3,8 +3,11 @@ layout: post
 title: 'Hello Jekyll'
 date: 2017-04-18
 author: Jekyll
-cover: 'https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?w=1600&q=900'
-tags: jekyll
+cover: 'https://unsplash.lisz.tk/1455459182396-ae46100617cb.webp'
+cover_author: 'Adi Constantin'
+cover_author_link: 'https://unsplash.com/@idoevolve'
+tags: 
+- jekyll
 ---
 
 > Transform your plain text into static websites and blogs.
@@ -23,4 +26,4 @@ Throughout this guide there are a number of small-but-handy pieces of informatio
 
 ### Video Test
 
-<iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
+<iframe type="text/html" width="100%" height="385" src="https://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>

@@ -6,7 +6,19 @@ date: 2021-12-22 19:50:00 +0800
 categories: tech
 author: zhonger
 cover: 'https://images.unsplash.com/photo-1614659754166-a2fd14dbc4d3?w=1600&q=900'
-tags: jekyll theme blog ac develop 主题 前端开发 学术 运维
+cover_author: 'Paris Hour'
+cover_author_link: 'https://unsplash.com/@paris168'
+tags: 
+- jekyll 
+- theme 
+- blog 
+- ac 
+- develop 
+- 主题 
+- 前端开发 
+- 学术 
+- 运维
+pin: true
 ---
 
 ## 前言
@@ -109,6 +121,10 @@ tags: jekyll theme blog ac develop 主题 前端开发 学术 运维
 
 &emsp;&emsp;更换 Prism 库加载方式，采用按需自动加载代码类型，尽可能减少因 Prism 造成的阻塞。修复了某些样式问题。增加显示行数支持、官方主题选择支持。如下所示可以进行设置，具体主题风格样式可以访问 [Prism 官网](https://prismjs.com/) 了解更多。
 
+(2022年5月23日更新)
+
+&emsp;&emsp;除官方代码库中默认代码主题外，新增扩展代码主题支持，比如常用的 One Light 等等。具体主题风格样式可以查看 [PrismJS/prism-themes](https://github.com/PrismJS/prism-themes/tree/master/themes) 了解更多。
+
 ```yaml
 # Prism
 prism:
@@ -136,9 +152,91 @@ prism:
 </button>
 ```
 
+#### 文章置顶功能
+
+(2022年5月26日更新)
+
+&emsp;&emsp;鉴于现有的 Jekyll 文章置顶库有点年久失修，决定徒手实现了一下文章置顶功能。具体文章列表页和归档页置顶效果如下所示：
+
+![文章置顶 Top acticles](https://i.lisz.top/blog/mcF2Z3.webp)
+![归档页文章置顶 Top acticles in archives](https://i.lisz.top/blog/yajcoi.webp)
+
+#### 分页依赖升级
+
+(2022年5月26日更新)
+
+&emsp;&emsp;由于原有的 jekyll-paginate 库已停止更新，所以升级到目前更新、维护活跃的 [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2) 库。原有的分页配置自 v1.1.7 版本后无法使用，请更换为如下类似设置：
+
+```yaml
+# _config.yml 旧配置
+paginate: 10
+paginate_path: 'blog/page:num'
+
+# _config.yml 新配置
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: 'page:num/'
+```
+
+&emsp;&emsp;另外，blog/index.html 的头部信息中应该加上如下**启用分页**的配置。否则，jekyll-paginate-v2 不会主动工作。
+
+```yaml
+pagination: 
+  enabled: true
+```
+
+#### 封面图片作者及链接
+
+(2022年5月26日更新)
+
+&emsp;&emsp;一直以来封面图片都是来自 [Unsplash](https://unsplash.com) 的免费高清图片，为了表明封面图片的来源和作者，现在文章的元信息中添加了对封面图片作者及链接的支持。如果想要声明，可以直接在文章的头部信息中添加如下配置：
+
+```yaml
+......
+cover: ''
+cover_author: ''
+cover_author_link: ''
+......
+```
+
+&emsp;&emsp;非文章的页面中也可以像上面那样声明相关的封面作者及链接，效果如下所示：
+
+![页面封面图片信息 Cover author for pages](https://i.lisz.top/blog/fzWjPs.webp)
+
 #### 字数统计及阅读时间估计
 
 &emsp;&emsp;字数统计及阅读时间估计这个小功能其实以前在用 WordPress 的时候比较常见。虽然说统计和估计的结果不一定完全准确，但是还是起到了一定的辅助阅读的作用。效果可以查看本页标题下的基本信息区域。
+
+#### 时间本地化与最近更新时间
+
+(2022年5月22日更新)
+
+&emsp;&emsp;为了支持来自不同时区的读者直接可以看到文章发布对应的本地时间，现已利用 dayjs 新增**时间本地化**功能。并利用 Github API 查询页面的最近一次 commit 更新时间作为文章**最近更新时间**。效果如下图所示。
+
+![构建位置时区 Jekyll deployment timezone](https://i.lisz.top/blog/Anb4xH.webp)
+![读者时区 Reader timezone](https://i.lisz.top/blog/NMPXmQ.webp)
+
+&emsp;&emsp;如需使用**最近更新时间**功能，务必在 _config.yml 文件中添加以下配置项：
+
+```yaml
+# Github
+github:
+  enabled: true
+  owner: github_username
+  repository: github_project_name
+```
+
+&emsp;&emsp;如未正确进行以上配置，默认会将最近更新时间与发布时间保持一致。
+
+#### 版权显式声明
+
+(2022年5月18日更新)
+
+&emsp;&emsp;之前的版本只会在页面底部的信息栏中显示一个 CC 4.0 的小图标，不是很醒目。根据调研其他静态网站主题，发现一般都会在文章的末尾自动生成一个比较醒目的版权声明。另外，在版权声明中也将根据最近更新时间来判断内容是否可能过时。如果最近更新时间距离当前时间大于 365 天，则会显示具体日期并提醒有内容过时的可能。效果如下所示。
+
+![版权显式声明 Copyright](https://i.lisz.top/blog/scNRyd.webp)
+![内容可能过时提醒 Long time ago notification](https://i.lisz.top/blog/C8RWtL.webp)
 
 #### 文章侧边索引导航
 
@@ -156,7 +254,7 @@ prism:
 
 #### 支持 Waline 评论系统
 
-&emsp;&emsp;目前已支持基于 Valine 衍生的简洁、安全的评论系统。可以根据官方提供的 [快速上手](https://waline.js.org/guide/get-started.html) 进行配置，以下为 _config.yml 中需要配置的内容：
+&emsp;&emsp;目前已支持基于 Valine 衍生的简洁、安全的评论系统 Waline。可以根据官方提供的 [快速上手](https://waline.js.org/guide/get-started.html) 进行配置，以下为 _config.yml 中需要配置的内容：
 
 ```yaml
 # _config.yml
@@ -166,7 +264,16 @@ comments:
   waline_url: https://xxxxxx.vercel.app
 ```
 
-&emsp;&emsp;目前未对多评论系统同时支持进行优化，所以如果 Disqus 和 Waline 同时开启时，Disqus 在前 Waline 在后同时出现。如果用户环境无法访问 Disqus 即只能看到 Waline。
+&emsp;&emsp;~~目前未对多评论系统同时支持进行优化，所以如果 Disqus 和 Waline 同时开启时，Disqus 在前 Waline 在后同时出现。如果用户环境无法访问 Disqus 即只能看到 Waline。~~
+
+(2022年5月22日更新)
+
+&emsp;&emsp;新增多评论切换按钮：当同时使用 Disqus 和 Waline 时，会在评论区域的右上角看到一个左右滑动切换按钮。如下所示，从左往右滑动即可从 Disqus 切换到 Waline。
+
+&emsp;&emsp;同时修复了手动切换深色模式时 Disqus 不会自动切换模式而造成的显示问题。目前在模式切换时 Disqus 会主动进行重新加载以适应当前模式。
+
+![Disqus 评论系统 Disqus comment](https://i.lisz.top/blog/WBgbUB.webp)
+![Waline 评论系统 Waline comments](https://i.lisz.top/blog/45JQ9H.webp)
 
 #### 支持 PWA
 

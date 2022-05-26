@@ -2,7 +2,9 @@
 layout: page
 home-title: Welcome to zhonger's blog!
 description: Writing, writing, writing ...
-cover: https://images.unsplash.com/photo-1630824869986-a5b2f513b1f4?w=1600&q=900
+cover: https://unsplash.lisz.tk/1630824869986-a5b2f513b1f4.webp
+cover_author: 'Eean Chen'
+cover_author_link: 'https://unsplash.com/@zhouyudesign'
 ---
 
 # 更新日志
@@ -46,9 +48,20 @@ cover: https://images.unsplash.com/photo-1630824869986-a5b2f513b1f4?w=1600&q=900
   - 修复代码块关键字样式问题
 - 2022年5月16日，新增若干功能，修复某些样式错误：
   - 新增 umami 统计方式支持
-  - 新增显示版权声明
+  - 新增显式版权声明
   - 新增主题版本号显示
   - 修复图片宽度默认为原始宽度，最大宽度为 100%。
+- 2022年5月22日，新增若干功能，修复某些错误：
+  - 新增多评论切换按钮
+  - 新增最近更新一次时间
+  - 新增时间本地化
+  - 修复模式切换后 Disqus 未主动跟随切换模式问题
+  - 缩短字数统计显示长度
+- 2022年5月23~26日，新增若干功能：
+  - 新增多种 Prism 主题支持
+  - 新增文章置顶功能
+  - 新增封面图片作者及链接
+  - 升级 jekyll-paginate 为 jekyll-paginate-v2
 
 ## 节点信息
 
