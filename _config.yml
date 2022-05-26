@@ -148,4 +148,4 @@ permalink: /:categories/:title.html
 toc: true
 
 # Plugins
-# plugins: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
+# plugins: [jekyll-paginate-v2, jekyll-feed, jekyll-sitemap]
