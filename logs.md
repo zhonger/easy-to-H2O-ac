@@ -2,7 +2,7 @@
 layout: page
 home-title: Welcome to zhonger's blog!
 description: Writing, writing, writing ...
-cover: https://unsplash.lisz.tk/1630824869986-a5b2f513b1f4.webp
+cover: 'https://images.unsplash.com/photo-1630824869986-a5b2f513b1f4'
 cover_author: 'Eean Chen'
 cover_author_link: 'https://unsplash.com/@zhouyudesign'
 ---
@@ -62,13 +62,36 @@ cover_author_link: 'https://unsplash.com/@zhouyudesign'
   - 新增文章置顶功能
   - 新增封面图片作者及链接
   - 升级 jekyll-paginate 为 jekyll-paginate-v2
+- 2022年6月1日，修复某些问题：
+  - 修复分页对应文章列表错误
+- 2022年7月2日~6日，新增若干功能：
+  - 新增 Github Action 版本自动发布、推送包到 Rubygem
+  - 新增 Cookie 使用提示
+  - 新增站点使用条款
+  - 根据频次对 Tags 重新排序（比原始排序更准确）
+  - 新增左右键切换文章的快捷键（仅适用于文章页）
+  - 对文章样式做了一些优化
+- 2022年7月20日~8月1日，新增若干功能，修复某些错误：
+  - 新增“朋友们”单页面，支持带图标的链接
+  - 新增二级菜单栏配置支持
+  - 新增个人 Markdown CV 中英文页面（可打印）
+  - 更改默认字体为 [LXGW](https://github.com/chawyehsu/lxgw-wenkai-webfont) （落霞孤鹜字体）
+  - 修改 Cookie 使用提示默认有效不弹出时间为一年
+  - 修复因文章元信息过多造成溢出背景区域
+  - 对页面样式做了一些优化
+- 2022年8月31日，新增若干功能，修复某些错误：
+  - 新增 Mermaid 流程图支持
+  - 新增站内站外链接区分（适用于文章和页面的内容部分）
+  - 调整页面内容最大宽度及其他相应布局
+  - 新增 Categories 页面
+  - 新增统计小插件
 
 ## 节点信息
 
 | 托管方 | 支持访问域名 | IPv4 | IPv6 | 备注 |
 | ---- | ---- | ---- | ---- |
-| Netlify | [h2o-ac.netlify.app](https://h2o-ac.netlify.app) | 是 | 是 | 全球性节点 |
+| Netlify | [h2o-ac.lisz.me](https://h2o-ac.lisz.me) | 是 | 是 | 全球性节点 |
 | Github | [h2o-ac.lisz.ink](https://h2o-ac.lisz.ink) | 是 | 否 | 美国节点 |
 | Cloudflare| [h2o-ac.pages.dev](https://h2o-ac.pages.dev) | 是 | 是 | 全球性节点 |
-| Vercel | [h2o-ac.vercel.app](https://zhonger.vercel.app) | 是 | 否 | 美国节点 |
+| Vercel | [h2o-ac.vercel.app](https://h2o-ac.vercel.app) | 是 | 否 | 美国节点 |
 | Azure | [h2o-ac.lui.site](https://h2o-ac.lui.site) | 是 | 否 | 国内香港节点 |

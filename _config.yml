@@ -26,8 +26,12 @@ nav:
   blog: '/blog/index.html'
   archives: '/archives.html'
   tags: '/tags.html'
-  RSS: '/feed.xml'
-  logs: '/logs.html'
+  about:   
+    logs: '/logs.html'
+    tos: '/tos.html'
+    RSS: '/feed.xml'
+    CV: '/cv.html'
+    links: '/links.html'
 
 # Gray for the whole site 全站灰色
 gray: false
