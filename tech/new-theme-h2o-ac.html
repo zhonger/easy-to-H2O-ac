@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="zh-cn">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,49 +15,93 @@
     <meta property="og:description" content="个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。">
     <meta property="og:site_name" content="Mr Li">
     <meta property="og:gray" content="false">
-    <meta property="post-date-format" content="0">
     
-    <meta property="post-date" content="2021-12-22 11:50:00 +0000" />
-    
-    
-    <meta name="theme-color" content="#81BBFF" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/assets/img/touch/apple-touch-icon.png"/>
     <link rel="Shortcut Icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="bookmark" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.min.css" />
-    <link rel="stylesheet" href="/assets/css/plugins.min.css" />
-    <link rel="preload" href="/assets/fonts/Merriweather-Regular.ttf" as="font" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/assets/fonts/Merriweather-Regular.ttf" media="print" onload="this.media='all'" />
-    
-    
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-one-light.min.css" />
-    
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/plugins/line-numbers/prism-line-numbers.min.css">
-    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/plugins.min.css">
+    <link rel="preload" href="/assets/fonts/Merriweather-Regular.ttf" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/app.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.css" />
     <script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
 </head>
 
 
-
-<body class="line-numbers" ontouchstart="">
-
-
+<body>
   <!--[if lt IE 10]>
   <div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
   <![endif]-->
   
-  <div id="all" class="post">
+  <div id="all">
   
     <input id="nm-switch" type="hidden" value="false"> <header class="g-header">
     <div class="g-logo">
-      <a href="/" aria-label="logo"></a>
+      <a href="/"></a>
     </div>
     <!-- <i id="menu-toggle" class="iconfont icon-menu"></i> -->
     <div id="mode-toggle">
@@ -76,41 +118,19 @@
     <nav class="g-nav">
         <ul>
             
-            <li>
-                <a href="/" aria-label="home">
-                    home
-                </a>
-            </li>
+            <li><a href="/">home</a></li>
             
-            <li>
-                <a href="/blog/index.html" aria-label="blog">
-                    blog
-                </a>
-            </li>
+            <li><a href="/blog/index.html">blog</a></li>
             
-            <li>
-                <a href="/archives.html" aria-label="archives">
-                    archives
-                </a>
-            </li>
+            <li><a href="/archives.html">archives</a></li>
             
-            <li>
-                <a href="/tags.html" aria-label="tags">
-                    tags
-                </a>
-            </li>
+            <li><a href="/tags.html">tags</a></li>
             
-            <li>
-                <a href="/feed.xml" aria-label="RSS">
-                    RSS
-                </a>
-            </li>
+            <li><a href="/feed.xml">RSS</a></li>
             
-            <li>
-                <a href="/logs.html" aria-label="logs">
-                    logs
-                </a>
-            </li>
+            <li><a href="/logs.html">logs</a></li>
+            
+            <li><a href="/%7B%22logs%22=%3E%22/logs.html%22,%20%22tos%22=%3E%22/tos.html%22,%20%22RSS%22=%3E%22/feed.xml%22,%20%22CV%22=%3E%22/cv.html%22,%20%22links%22=%3E%22/links.html%22%7D">about</a></li>
             
             <li class="mode">
                 <svg class="icon day" aria-hidden="true">
@@ -156,63 +176,24 @@
         <h1>H2O-ac theme for Jekyll</h1>
         <div class="post-meta">
           <span class="post-meta-item">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-user"></use>
-            </svg>
-            zhonger
+            <i class="iconfont icon-author"></i>zhonger
           </span>
           <time class="post-meta-item" datetime="21-12-22">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-calendar"></use>
-            </svg>
-            <span class="create-at"></span>
-          </time>
-          <time class="post-meta-item" datetime="21-12-22">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-update"></use>
-            </svg>
-            <span class="update-at"></span>
-          </time>
-          
-            <span class="post-meta-item">
-              <svg class="icon words" aria-hidden="true">
-                <use xlink:href="#icon-words"></use>
-              </svg>
-              
-              本文总共  7.5k  字
-            </span>
-            <span class="post-meta-item">
-              <svg class="icon time" aria-hidden="true">
-                <use xlink:href="#icon-time"></use>
-              </svg>
-              阅读全文大约需要 22 分钟
-            </span>
+            <i class="iconfont icon-date"></i>
             
-              <span class="post-meta-item">
-                <svg class="icon pv" aria-hidden="true">
-                  <use xlink:href="#icon-pv"></use>
-                </svg>
-                本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次 
-              </span>
+              2021-12-22 11:50:00 +0000 
             
+          </time>
+        </div>
+        <div class="post-meta">
           
-          
-            <span class="post-meta-item">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-image"></use>
-              </svg>
-              
-                
-                  封面图片由 <a href="https://unsplash.com/@paris168" target="_blank">Paris Hour</a> 提供
-                
-              
-            </span>
+          <span>本文总共 8936 字 <b>·</b> 阅读全文大约需要 26 分钟</span>
           
         </div>
       </div>
       
       <div class="filter"></div>
-        <div class="post-cover" style="background: url('https://images.unsplash.com/photo-1614659754166-a2fd14dbc4d3?w=1600&q=900') center no-repeat; background-size: cover;"></div>
+        <div class="post-cover" style="background: url('https://images.unsplash.com/photo-1529322365446-6efd62aed02e?w=1600&q=900') center no-repeat; background-size: cover;"></div>
       
     </header>
     <div class="post-content visible">
@@ -244,19 +225,19 @@
 
 <p>  学术首页如下图所示，并将原来 H2O 中的卡片首页移动到 blog 子目录下了。如果读者想要看到文章卡片展示页，还是可以点击顶部的导航栏中的 BLOG 直接访问。</p>
 
-<p><img src="https://i.lisz.top/blog/XyT038.webp" alt="首页 Home" /></p>
+<p><img src="https://i.luish.cc/blog/XyT038.webp" alt="首页 Home" /></p>
 
 <h4 id="归档页">归档页</h4>
 
 <p>  归档页设置为由 Jekyll 按照模板自动生成，以年份、日期、文章标题分级列表展示，简洁清晰。</p>
 
-<p><img src="https://i.lisz.top/blog/lj4vUP.webp" alt="归档页 Archives" /></p>
+<p><img src="https://i.luish.cc/blog/lj4vUP.webp" alt="归档页 Archives" /></p>
 
 <h4 id="系统日志页">系统日志页</h4>
 
 <p>  系统日志页其实也不是经常更新的，只有在博客整体作出设置或改进的才加以说明。另外，也可以将一些固定的站点信息放置在系统日志页，比如站点的多点部署信息，读者可以根据此信息访问最快、最合适的节点。</p>
 
-<p><img src="https://i.lisz.top/blog/7QLEc6.webp" alt="系统日志 Log" /></p>
+<p><img src="https://i.luish.cc/blog/7QLEc6.webp" alt="系统日志 Log" /></p>
 
 <h3 id="使用体验提升">使用体验提升</h3>
 
@@ -266,13 +247,13 @@
 
 <p>  H2O 原有的社交图标其实已经比较广泛，只是还有些领域局限性，比如学术研究人员可能更希望展示谷歌学术、ResearchGate、ORCID 等社交图标及链接，而运维开发人员可能更希望展示 SegmentFault、CSDN、博客园等社交图标及链接。这里在 H2O 提供的社交图标类型基础上做了这些平台图标的扩充，同时尝试了 Symbol 引用的方式来实现社交图标鼠标悬停的效果，从而简化代码（H2O 采用的是字体图标的方式，需要为每一个社交图标定义不同的主题色）。</p>
 
-<p><img src="https://i.lisz.top/blog/UpnQdk.webp" alt="社交图标 SNS" /></p>
+<p><img src="https://i.luish.cc/blog/UpnQdk.webp" alt="社交图标 SNS" /></p>
 
 <h4 id="查看大图">查看大图</h4>
 
 <p>  查看大图功能的确对于读者的阅读体验来说有很大的提升。就像我们阅读文献一样，可能首先会只看文章附图来大致掌握文章的核心点。博文的查看大图功能也可能有这样的异曲同工之妙。这里是采用的 <a href="https://fancyapps.com/docs/ui/fancybox">Fancybox</a> 插件实现的。H2O-ac 主题中只使用了最简单的配置，用户可以根据需求查看文档做出更多的修改。</p>
 
-<p><img src="https://i.lisz.top/blog/BzfBoz.webp" alt="查看大图 Fancybox" /></p>
+<p><img src="https://i.luish.cc/blog/BzfBoz.webp" alt="查看大图 Fancybox" /></p>
 
 <p>(2022年4月30日更新)</p>
 
@@ -284,9 +265,9 @@
 
 <p>  原来 H2O 主题的深色模式切换需要在 _config.yml 文件中配置开启，并且只能在固定时间段使用。此次更新在页面右上角提供了深色/浅色模式一键切换按钮，如下图所示。由于更新了深色模式采用 cookie 的方式来确定，此深色模式切换按钮可以与原来的深色模式配置共存。</p>
 
-<p><img src="https://i.lisz.top/blog/EPhFN9.webp" alt="浅色模式 Day mode" /></p>
+<p><img src="https://i.luish.cc/blog/EPhFN9.webp" alt="浅色模式 Day mode" /></p>
 
-<p><img src="https://i.lisz.top/blog/BD7BqC.webp" alt="深色模式 Night mode" /></p>
+<p><img src="https://i.luish.cc/blog/BD7BqC.webp" alt="深色模式 Night mode" /></p>
 
 <h4 id="提示框">提示框</h4>
 
@@ -294,31 +275,31 @@
 
 <p>  通过引入 <a href="https://github.com/lazee/premonition">lazee/premonition</a> 库新增五种提示框：笔记、提示、警告、错误、引用，完全兼容原生 Markdown 语法，并对样式进行了主题适应。以下为五种提示框的实际效果。</p>
 
-<div class="premonition note"> <div class="header"> <svg class="icon note" aria-hidden="true"> <use xlink:href="#icon-note"></use> </svg> <div class="title"> Note </div> </div> <div class="content"> <p>The body of the note goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
+<blockquote>
+  <p>note “”
+The body of the note goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
+</blockquote>
 
+<blockquote>
+  <p>info “小提示”
+The body of the info goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
+</blockquote>
 
+<blockquote>
+  <p>warning “”
+The body of the warning goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
+</blockquote>
 
- </div> </div>
-<div class="premonition info"> <div class="header"> <svg class="icon info" aria-hidden="true"> <use xlink:href="#icon-info"></use> </svg> <div class="title"> 小提示 </div> </div> <div class="content"> <p>The body of the info goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
+<blockquote>
+  <p>error “”
+The body of the error goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
+</blockquote>
 
+<blockquote>
+  <p>citation “莎士比亚”
+To be or not to be is a question.</p>
+</blockquote>
 
-
- </div> </div>
-<div class="premonition warning"> <div class="header"> <svg class="icon warning" aria-hidden="true"> <use xlink:href="#icon-warning"></use> </svg> <div class="title"> Warning </div> </div> <div class="content"> <p>The body of the warning goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
-
-
-
- </div> </div>
-<div class="premonition error"> <div class="header"> <svg class="icon error" aria-hidden="true"> <use xlink:href="#icon-error"></use> </svg> <div class="title"> Error </div> </div> <div class="content"> <p>The body of the error goes here. Premonition allows you to write any <code class="language-plaintext highlighter-rouge">Markdown</code> inside the block.</p>
-
-
-
- </div> </div>
-<div class="premonition citation"> <div class="header"> <svg class="icon citation" aria-hidden="true"> <use xlink:href="#icon-citation"></use> </svg> </div> <div class="content"> <p>To be or not to be is a question.</p>
-
-
-
- </div> <div class="ref"> ------ 莎士比亚 </div> </div>
 <h4 id="代码高亮优化">代码高亮优化</h4>
 
 <p>  本人使用 H2O 主题的时候代码高亮功能还是沿用的 Jekyll 自带的，后来 H2O 主题也开始采用了 <a href="https://prismjs.com/">Prism.js</a>。不过由于使用的是 <code class="language-plaintext highlighter-rouge">OKAIDIA</code> 高亮主题，所以有些段落中的格式化字段显示上有些问题。这里，仍然采用默认主题，并且扩增到 Prism.js 支持的所有编程语言类型。效果可以从前一句的 OKAIDIA 字段和下面即将出现的代码片段看出。</p>
@@ -368,8 +349,8 @@
 
 <p>  鉴于现有的 Jekyll 文章置顶库有点年久失修，决定徒手实现了一下文章置顶功能。具体文章列表页和归档页置顶效果如下所示：</p>
 
-<p><img src="https://i.lisz.top/blog/mcF2Z3.webp" alt="文章置顶 Top acticles" />
-<img src="https://i.lisz.top/blog/yajcoi.webp" alt="归档页文章置顶 Top acticles in archives" /></p>
+<p><img src="https://i.luish.cc/blog/mcF2Z3.webp" alt="文章置顶 Top acticles" />
+<img src="https://i.luish.cc/blog/yajcoi.webp" alt="归档页文章置顶 Top acticles in archives" /></p>
 
 <h4 id="分页依赖升级">分页依赖升级</h4>
 
@@ -409,7 +390,7 @@
 
 <p>  非文章的页面中也可以像上面那样声明相关的封面作者及链接，效果如下所示：</p>
 
-<p><img src="https://i.lisz.top/blog/fzWjPs.webp" alt="页面封面图片信息 Cover author for pages" /></p>
+<p><img src="https://i.luish.cc/blog/fzWjPs.webp" alt="页面封面图片信息 Cover author for pages" /></p>
 
 <h4 id="字数统计及阅读时间估计">字数统计及阅读时间估计</h4>
 
@@ -421,8 +402,8 @@
 
 <p>  为了支持来自不同时区的读者直接可以看到文章发布对应的本地时间，现已利用 dayjs 新增<strong>时间本地化</strong>功能。并利用 Github API 查询页面的最近一次 commit 更新时间作为文章<strong>最近更新时间</strong>。效果如下图所示。</p>
 
-<p><img src="https://i.lisz.top/blog/Anb4xH.webp" alt="构建位置时区 Jekyll deployment timezone" />
-<img src="https://i.lisz.top/blog/NMPXmQ.webp" alt="读者时区 Reader timezone" /></p>
+<p><img src="https://i.luish.cc/blog/Anb4xH.webp" alt="构建位置时区 Jekyll deployment timezone" />
+<img src="https://i.luish.cc/blog/NMPXmQ.webp" alt="读者时区 Reader timezone" /></p>
 
 <p>  如需使用<strong>最近更新时间</strong>功能，务必在 _config.yml 文件中添加以下配置项：</p>
 
@@ -441,8 +422,8 @@
 
 <p>  之前的版本只会在页面底部的信息栏中显示一个 CC 4.0 的小图标，不是很醒目。根据调研其他静态网站主题，发现一般都会在文章的末尾自动生成一个比较醒目的版权声明。另外，在版权声明中也将根据最近更新时间来判断内容是否可能过时。如果最近更新时间距离当前时间大于 365 天，则会显示具体日期并提醒有内容过时的可能。效果如下所示。</p>
 
-<p><img src="https://i.lisz.top/blog/scNRyd.webp" alt="版权显式声明 Copyright" />
-<img src="https://i.lisz.top/blog/C8RWtL.webp" alt="内容可能过时提醒 Long time ago notification" /></p>
+<p><img src="https://i.luish.cc/blog/scNRyd.webp" alt="版权显式声明 Copyright" />
+<img src="https://i.luish.cc/blog/C8RWtL.webp" alt="内容可能过时提醒 Long time ago notification" /></p>
 
 <h4 id="文章侧边索引导航">文章侧边索引导航</h4>
 
@@ -477,8 +458,8 @@
 
 <p>  同时修复了手动切换深色模式时 Disqus 不会自动切换模式而造成的显示问题。目前在模式切换时 Disqus 会主动进行重新加载以适应当前模式。</p>
 
-<p><img src="https://i.lisz.top/blog/WBgbUB.webp" alt="Disqus 评论系统 Disqus comment" />
-<img src="https://i.lisz.top/blog/45JQ9H.webp" alt="Waline 评论系统 Waline comments" /></p>
+<p><img src="https://i.luish.cc/blog/WBgbUB.webp" alt="Disqus 评论系统 Disqus comment" />
+<img src="https://i.luish.cc/blog/45JQ9H.webp" alt="Waline 评论系统 Waline comments" /></p>
 
 <h4 id="支持-pwa">支持 PWA</h4>
 
@@ -491,6 +472,74 @@
   <span class="na">color</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#81BBFF'</span>
   <span class="na">short_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">lisz'</span>
 </code></pre></div></div>
+
+<h4 id="支持-mermaid">支持 Mermaid</h4>
+
+<p>(2022年8月29日更新)</p>
+
+<p>  不少同学可能会有在文章中放置流程图的需求，为了满足这一需求，现添加了 <a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a> 来支持像写代码一样画图。</p>
+
+<p>  为了兼容 Markdown 语法，这里采用了自定义的代码类型。当代码类型为 <code class="language-plaintext highlighter-rouge">mermaid</code> 时，PrismJS 会自动以代码的形式美化展示；当代码类型为 <code class="language-plaintext highlighter-rouge">mermaid2</code> 时，页面会自动使用 Mermaid 画成图展示出来，如下所示。</p>
+
+<p>  考虑到页面宽度有限，Mermaid 所画出的甘特图等其他比较大一点的图不太好看，也增加了<strong>放大重绘</strong>的功能。如下所示，点击图的右上角的按钮即可全屏查看大图。</p>
+
+<pre><code class="language-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+
+<pre><code class="language-mermaid2">    graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+
+<pre><code class="language-mermaid2">    gantt
+      title A Gantt Diagram
+      dateFormat x
+      axisFormat %L
+      section Section
+      A task           :a1, 0, 30ms
+      Another task     :after a1, 20ms
+      section Another
+      Another another task      :b1, 20, 12ms
+      Another another another task     :after b1, 24ms
+</code></pre>
+
+<pre><code class="language-mermaid2">    gantt
+    dateFormat  YYYY-MM-DD
+    title       Adding GANTT diagram functionality to mermaid
+    excludes    weekends
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2              :         des4, after des3, 5d
+
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :1d
+    Functionality added                 :milestone, 2014-01-25, 0d
+
+    section Documentation
+    Describe gantt syntax               :active, a1, after des1, 3d
+    Add gantt diagram to demo page      :after a1  , 20h
+    Add another diagram to demo page    :doc1, after a1  , 48h
+
+    section Last section
+    Describe gantt syntax               :after doc1, 3d
+    Add gantt diagram to demo page      :20h
+    Add another diagram to demo page    :48h
+</code></pre>
 
 <h4 id="配置项">配置项</h4>
 
@@ -592,7 +641,7 @@
 
 <p>  为了方便用户使用 H2O-ac 主题，特别提供了 Github 的模板功能。如下图所示，访问 <a href="https://github.com/zhonger/jekyll-theme-H2O-ac">H2O-ac</a> 可以看到如下的 Use this template 按钮，点击该按钮即可用 H2O-ac 主题创建自己的博客代码仓库。想要了解更多步骤，可以访问 Github 官方文档之 <a href="https://docs.github.com/cn/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template">从模板创建仓库</a>。</p>
 
-<p><img src="https://i.lisz.top/blog/oHHZZh.webp" alt="从模板新建 Start the blog from the template" /></p>
+<p><img src="https://i.luish.cc/blog/oHHZZh.webp" alt="从模板新建 Start the blog from the template" /></p>
 
 <h4 id="方式二已有博客迁移">方式二：已有博客迁移</h4>
 
@@ -617,17 +666,11 @@
 <p>（Ps: <del>由于沿用了 H2O 的 Logo，可能会侵犯廖柯宇的版权。如果的确如此，后续将会设计一个新的 Logo。</del> 已采用新 Logo。）
 （2022年1月10日更新）</p>
 
-            <div class="post-copyright">
-              <p><span>版权声明：</span>如无特别声明，本文版权归&nbsp;<a href="https://easy-h2o-ac.pages.dev">Mr Li</a>&nbsp;所有，转载请注明本文链接。</p>
-              <p>（采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议进行授权）</p>
-              <p><span>本文标题：</span>《 H2O-ac theme for Jekyll 》</p>
-              <p><span>本文链接：</span><a href="https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac.html">https://easy-h2o-ac.pages.dev/tech/new-theme-h2o-ac.html</a></p>
-            </div>
           </article>
         </div>   
         <div class="table-of-contents">
           <h2>Contents</h2>
-          <ul><li><a href="#前言">前言</a></li><li><a href="#新特性">新特性</a><ul><li><a href="#更适合学术人和运维程序员的页面结构">更适合学术人和运维程序员的页面结构</a><ul><li><a href="#学术首页">学术首页</a></li><li><a href="#归档页">归档页</a></li><li><a href="#系统日志页">系统日志页</a></li></ul></li><li><a href="#使用体验提升">使用体验提升</a><ul><li><a href="#社交图标扩展">社交图标扩展</a></li><li><a href="#查看大图">查看大图</a></li><li><a href="#深色模式切换按钮">深色模式切换按钮</a></li><li><a href="#提示框">提示框</a></li><li><a href="#代码高亮优化">代码高亮优化</a></li><li><a href="#代码复制">代码复制</a></li><li><a href="#文章置顶功能">文章置顶功能</a></li><li><a href="#分页依赖升级">分页依赖升级</a></li><li><a href="#封面图片作者及链接">封面图片作者及链接</a></li><li><a href="#字数统计及阅读时间估计">字数统计及阅读时间估计</a></li><li><a href="#时间本地化与最近更新时间">时间本地化与最近更新时间</a></li><li><a href="#版权显式声明">版权显式声明</a></li><li><a href="#文章侧边索引导航">文章侧边索引导航</a></li><li><a href="#支持-waline-评论系统">支持 Waline 评论系统</a></li><li><a href="#支持-pwa">支持 PWA</a></li><li><a href="#配置项">配置项</a></li><li><a href="#前端自动构建工作流优化">前端自动构建工作流优化</a></li></ul></li></ul></li><li><a href="#使用方法">使用方法</a><ul><li><a href="#初始化">初始化</a><ul><li><a href="#方式一从模板新建博客">方式一：从模板新建博客</a></li><li><a href="#方式二已有博客迁移">方式二：已有博客迁移</a></li></ul></li><li><a href="#本地测试">本地测试</a></li><li><a href="#发布部署">发布部署</a></li></ul></li><li><a href="#结束语">结束语</a></li></ul>
+          <ul><li><a href="#前言">前言</a></li><li><a href="#新特性">新特性</a><ul><li><a href="#更适合学术人和运维程序员的页面结构">更适合学术人和运维程序员的页面结构</a><ul><li><a href="#学术首页">学术首页</a></li><li><a href="#归档页">归档页</a></li><li><a href="#系统日志页">系统日志页</a></li></ul></li><li><a href="#使用体验提升">使用体验提升</a><ul><li><a href="#社交图标扩展">社交图标扩展</a></li><li><a href="#查看大图">查看大图</a></li><li><a href="#深色模式切换按钮">深色模式切换按钮</a></li><li><a href="#提示框">提示框</a></li><li><a href="#代码高亮优化">代码高亮优化</a></li><li><a href="#代码复制">代码复制</a></li><li><a href="#文章置顶功能">文章置顶功能</a></li><li><a href="#分页依赖升级">分页依赖升级</a></li><li><a href="#封面图片作者及链接">封面图片作者及链接</a></li><li><a href="#字数统计及阅读时间估计">字数统计及阅读时间估计</a></li><li><a href="#时间本地化与最近更新时间">时间本地化与最近更新时间</a></li><li><a href="#版权显式声明">版权显式声明</a></li><li><a href="#文章侧边索引导航">文章侧边索引导航</a></li><li><a href="#支持-waline-评论系统">支持 Waline 评论系统</a></li><li><a href="#支持-pwa">支持 PWA</a></li><li><a href="#支持-mermaid">支持 Mermaid</a></li><li><a href="#配置项">配置项</a></li><li><a href="#前端自动构建工作流优化">前端自动构建工作流优化</a></li></ul></li></ul></li><li><a href="#使用方法">使用方法</a><ul><li><a href="#初始化">初始化</a><ul><li><a href="#方式一从模板新建博客">方式一：从模板新建博客</a></li><li><a href="#方式二已有博客迁移">方式二：已有博客迁移</a></li></ul></li><li><a href="#本地测试">本地测试</a></li><li><a href="#发布部署">发布部署</a></li></ul></li><li><a href="#结束语">结束语</a></li></ul>
         </div>
       </div>
       
@@ -652,7 +695,7 @@
         <ul class="sns-links">
           
           <li>
-            <a href="https://scholar.google.com/citations?user=AUupIooAAAAJ" target="_blank" aria-label="google-scholar">
+            <a href="https://scholar.google.com/citations?user=AUupIooAAAAJ" target="_blank">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-google-scholar"></use>
               </svg>
@@ -660,7 +703,7 @@
           </li>
           
           <li>
-            <a href="https://www.researchgate.net/profile/Shengzhou-Li" target="_blank" aria-label="researchgate">
+            <a href="https://www.researchgate.net/profile/Shengzhou-Li" target="_blank">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-researchgate"></use>
               </svg>
@@ -668,7 +711,7 @@
           </li>
           
           <li>
-            <a href="https://orcid.org/0000-0001-6973-3825" target="_blank" aria-label="ORCID">
+            <a href="https://orcid.org/0000-0001-6973-3825" target="_blank">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-ORCID"></use>
               </svg>
@@ -676,7 +719,7 @@
           </li>
           
           <li>
-            <a href="https://github.com/zhonger" target="_blank" aria-label="github">
+            <a href="https://github.com/zhonger" target="_blank">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-github"></use>
               </svg>
@@ -684,7 +727,7 @@
           </li>
           
           <li>
-            <a href="https://www.linkedin.com/in/shengzhouli/" target="_blank" aria-label="linkedin">
+            <a href="https://www.linkedin.com/in/shengzhouli/" target="_blank">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-linkedin"></use>
               </svg>
@@ -692,7 +735,7 @@
           </li>
           
           <li>
-            <a href="https://segmentfault.com/u/wuwozhonger" target="_blank" aria-label="segmentfault">
+            <a href="https://segmentfault.com/u/wuwozhonger" target="_blank">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-segmentfault"></use>
               </svg>
@@ -707,7 +750,7 @@
 
         
         <div class="read-next-item">
-          <a href="/test/mathjax-test.html" class="read-next-link" aria-label="MathJax Test"></a>
+          <a href="/test/mathjax-test.html" class="read-next-link"></a>
             <section>
               <span>MathJax Test</span>
               <p>mathjax in markdown :)</p>
@@ -719,10 +762,6 @@
         </div>
         
       </section>
-      
-   
-      
-
       
     </section>
 
@@ -738,43 +777,20 @@
     <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备xxxxxxxx号</a>
   
   </section>
-  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> & <a href="https://github.com/zhonger/jekyll-theme-H2O-ac">H2O-ac</a> v1.1.8  (based on <a href="https://github.com/kaeyleo/jekyll-theme-H2O">H2O</a>) 
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> & <a href="https://github.com/zhonger/jekyll-theme-H2O-ac">Theme H2O-ac</a> (based on <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a>) 
+  
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+  
   
   </section>
-  
-  <section>
-    <span id="busuanzi_container_site_pv">
-      👁️ Total Views <span id="busuanzi_value_site_pv"></span> <b>·</b>
-    </span>
-    <span id="busuanzi_container_site_uv">
-      👤 Total Visitors <span id="busuanzi_value_site_uv"></span>
-    </span>
-  </section>
-  
 </footer>
-<button id="list" aria-label="Scroll back to top" class="mobile-list" type="button">
-  <svg class="icon list day" aria-hidden="true">
-    <use xlink:href="#icon-list-day"></use>
-  </svg>
-  <svg class="icon list night" aria-hidden="true">
-    <use xlink:href="#icon-list-night"></use>
-  </svg>
-  <svg class="icon exit day" aria-hidden="true">
-    <use xlink:href="#icon-exit-day"></use>
-  </svg>
-  <svg class="icon exit night" aria-hidden="true">
-    <use xlink:href="#icon-exit-night"></use>
-  </svg>
-</button>
-<button id="bttb" aria-label="Scroll back to top" class="bttb" type="button">
-  <svg class="icon up day" aria-hidden="true">
-    <use xlink:href="#icon-up-day"></use>
-  </svg>
-  <svg class="icon up night" aria-hidden="true">
-    <use xlink:href="#icon-up-night"></use>
+<button aria-label="Scroll back to top" class="bttb" type="button">
+  <svg class="icon up" aria-hidden="true">
+    <use xlink:href="#icon-up"></use>
   </svg>
 </button>
 
+<script src="//at.alicdn.com/t/font_3046306_1wfow6bxtae.js"></script>
 
   </div>
 
@@ -802,31 +818,18 @@
       wechatQrcodeTitle: "分享到微信朋友圈",
       wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
     });
-    $("a.social-share-icon").each(function() {
-      $(this).attr("aria-label", $(this).attr("class").split(' ')[1])
-    });
   </script>
 
   
 
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/prism-core.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="/assets/js/prism.js"></script>
   <script src="/assets/js/index.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" async></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/dayjs.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/customParseFormat.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.2/plugin/relativeTime.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.min.js"></script>
   <script>
       // 给图片添加链接
       $(document).ready(function() {
-          var baseurl = $("meta[property='og:baseurl']").attr('content');
           $("p img").each(function() {
-              $(this).attr('data-src', $(this).attr('src')).removeAttr('src').addClass("lazyload").attr('src', baseurl + '/assets/img/loading.gif');
-              var strA = "<a data-fancybox='gallery' ref='gallery' href='" + $(this).attr('data-src') + "' data-caption='" + $(this).attr('alt') + "'></a>";
+              var strA = "<a data-fancybox='gallery' ref='gallery' href='" + this.src + "' data-caption='" + this.alt + "'></a>";
               $(this).wrapAll(strA);
           });
 
@@ -840,119 +843,11 @@
                 }
               }
             }
-          });   
+          });
           
-          
-
-          if($("#comments-switch").length > 0){
-            var comment_status = $("#cmn-toggle-4")[0].checked;
-            if(comment_status){
-              $("#waline").addClass("active");
-            }else {
-              $("#disqus_thread").addClass("active");
-            }
-            $("#cmn-toggle-4").click(function(){
-              $("#disqus_thread").toggleClass("active");
-              $("#waline").toggleClass("active");
-            })
-          }else {
-            if($("#disqus_thread").length > 0) {
-              $("#disqus_thread").addClass("active");
-            }else if($("#waline").length > 0) {
-              $("#waline").addClass("active");
-            }
-          }
-
-          var time_formats = ['YYYY-MM-DD HH:mm:ss ZZ', 'YYYY DD MMM HH:mm:ss ZZ', 'YYYY年MM月DD日 HH:mm:ss ZZ'];
-          function dateFormat(date, format){
-            var date_org = dayjs(date, time_formats[format]);
-            var date     = date_org.format(time_formats[format]);
-            return {"date_org": date_org, "date": date}
-          }
-
-          dayjs.extend(window.dayjs_plugin_customParseFormat);
-          dayjs.extend(window.dayjs_plugin_relativeTime);
-          var post_date = $("meta[property='post-date']").attr('content');
-          var post_date_format = $("meta[property='post-date-format']").attr('content');
-          var local_post_date = dateFormat(post_date, post_date_format);
-
-          $(".post time span.create-at").html(local_post_date["date"]);
-
-          fetch("https://api.github.com/repos/zhonger/jekyll-theme-H2O-ac/commits?path=_posts/2021-12-22-new-theme-h2o-ac.md")
-          .then((response) => {
-            return response.json();
-          })
-          .then((commits) => {
-            if(commits.length != 0){
-              var update_at = dayjs(commits[0]['commit']['committer']['date']);
-            }else {
-              var update_at = post_date
-            }
-
-            var local_update_at = dateFormat(update_at, post_date_format);
-            $('.post time span.update-at').html(local_update_at["date"]);
-
-            var relative_time = dayjs().diff(local_update_at["date_org"], 'day');
-            if(relative_time > 365){
-              $(".post-copyright").append("<p class='tips'>本文最后一次更新为 <span>" + relative_time + "</span> 天前，文章中的某些内容可能已过时！</p>");
-            }
-          });         
       });
   </script>
-  <script src="https://at.alicdn.com/t/font_3046306_skfh9jzzbbf.js"></script>
   
-  
-  
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  <script>
-    if ("serviceWorker" in navigator) {
-        if (navigator.serviceWorker.controller) {
-            console.log("An active service worker found, no need to register");
-        } else {
-            // Register the service worker
-            navigator.serviceWorker
-            .register("/sw.js", {
-                scope: "/"
-            })
-            .then(function (reg) {
-                console.log("Service worker has been registered for scope: " + reg.scope);
-            });
-        }
-    }
-
-// 检测浏览器是否支持SW
-// if(navigator.serviceWorker != null){
-//     navigator.serviceWorker.register("/sw.js")
-//         .then(function(registartion){
-//             console.log('支持sw:',registartion.scope)
-//         })
-// } else {
-//     console.log('不支持sw')
-// }
-</script>
-  
-	<!--
-Author: Ray-Eldath
-refer to:
- - http://docs.mathjax.org/en/latest/options/index.html
--->
-
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-		jax: ["input/TeX", "output/HTML-CSS"],
-		tex2jax: {
-			inlineMath: [ ["$", "$"] ],
-			displayMath: [ ["$$", "$$"] ],
-			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-		},
-		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-      });
-    </script>
-
-	
 </body>
 
 </html>
