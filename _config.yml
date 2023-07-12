@@ -15,6 +15,10 @@ url: 'https://easy-h2o-ac.pages.dev' # your host
 baseurl: ''
 theme: jekyll-theme-h2o-ac
 
+# Internalization 国际化
+languages: ["zh-Hans", "zh-Hant", "en", "ja"]
+default_lang: "zh-Hans"
+
 # PWA
 pwa:
   color: '#81BBFF'
@@ -130,7 +134,6 @@ pagination:
   per_page: 10
 # paginate: 10
 # paginate_path: 'blog/page:num'
-exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md', '*.gemspec', '*.gem']
 
 # Markdown
 markdown: kramdown
@@ -151,5 +154,21 @@ permalink: /:categories/:title.html
 # TOC
 toc: true
 
-# Plugins
-# plugins: [jekyll-paginate-v2, jekyll-feed, jekyll-sitemap]
+# Mermaid
+mermaid: true
+
+# Webpusher
+webpusher: false
+
+# Foreverblog
+foreverblog: true
+
+# Wormhole
+wormhole: true
+
+# NotByAI
+notbyAI: true
+
+# Alive time
+alivetime: true
+alivestart: "12/23/2021"
